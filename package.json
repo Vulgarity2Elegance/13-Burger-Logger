@@ -1,0 +1,32 @@
+{
+    "name": "13-burger-logger",
+    "version": "1.0.0",
+    "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.",
+    "main": "server.js",
+    "scripts": {
+        "test": "none",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Vulgarity2Elegance/13-Burger-Logger.git"
+    },
+    "keywords": [
+        "MySQL",
+        "Node",
+        "Express",
+        "Handlebars",
+        "ORM"
+    ],
+    "author": "Youzhi Hu",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Vulgarity2Elegance/13-Burger-Logger/issues"
+    },
+    "homepage": "https://github.com/Vulgarity2Elegance/13-Burger-Logger#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.1.0",
+        "mysql": "^2.18.1"
+    }
+}
