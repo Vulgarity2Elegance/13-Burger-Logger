@@ -1,38 +1,71 @@
-<h1>Eat-Da-Burger!</h1>
+<div class="container">
+    <div class="row text-center"></div>
 
-<h2>Burgers that are not Devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers that are Devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger">burger Name:</label>
-        <input type="text" id="burger" name="name">
+    <div class="row my-2 py-2">
+        <div class="col-sm-12 col-md-10 offset-md-1">
+            <h1 class="text-center welcome">Eat-Da-Burger!</h1>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="devoured">Devoured?</label><br>
-        <input type="radio" name="devoured" value="1"> Devoured!<br>
-        <input type="radio" name="devoured" value="0"> Alive!
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <h2 class="ml-2 pl-3 colTitle">Burgers that are not Devoured!</h2>
+            <ul class="list-group">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="ml-4 pl-4 colTitle">Burgers that are Devoured!</h2>
+            <ul class="list-group ml-4">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 
-    <button type="submit">Add burger</button>
-</form>
+    <div class="row my-2 py-2">
+        <div class="col-sm-12 col-md-10 offset-md-1 text-center">
+
+            <form class="create-form">
+
+                <div class="form-group">
+                    <label for="burger">
+                        <p class="colTitle">Burger Name:</p>
+                    </label>
+                    <input type="text" id="burger" name="name">
+                </div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="devoured" value="1" class="colTitle">
+                    <label for="devoured">
+                        <p class="colTitle">Devoured!</p>
+                    </label>
+                </div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="devoured" value="0" class="colTitle">
+                    <label for="fresh">
+                        <p class="colTitle">Fresh!</p>
+                    </label>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn btn-success" type="submit">
+                        <h5 class="welcome">Add a Burger</h5>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
