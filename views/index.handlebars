@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row text-center">
-        <div class="col-sm-12 col-6">
+        <div class="col-sm-12 col-6 mx-auto">
             <img src="/assets/img/burger.jpeg" alt="burger" class="my-4 img-fluid">
         </div>
     </div>
@@ -12,8 +12,8 @@
     </div>
 
     <div class="row mt-2">
-        <div class="col-md-6">
-            <h2 class="ml-2 pl-3 colTitle">Burgers that are not Devoured!</h2>
+        <div class="col-md-6 my-1">
+            <h2 class="ml-2 pl-3 colTitle">Waiting to be Devoured!</h2>
             <ul class="list-group">
                 {{#each burgers}}
                 {{#unless devoured}}
@@ -23,8 +23,8 @@
             </ul>
         </div>
 
-        <div class="col-md-6">
-            <h2 class="ml-4 pl-4 colTitle">Burgers that are Devoured!</h2>
+        <div class="col-md-6 my-1">
+            <h2 class="ml-2 pl-3 colTitle">Already be Devoured!</h2>
             <ul class="list-group ml-4">
                 {{#each burgers}}
                 {{#if devoured}}
@@ -48,16 +48,16 @@
                 </div>
 
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" name="devoured" value="1" class="colTitle">
-                    <label for="devoured">
-                        <p class="colTitle">Devoured.</p>
+                    <input type="radio" name="devoured" value="0" class="colTitle">
+                    <label for="fresh">
+                        <p class="colTitle">Fresh.</p>
                     </label>
                 </div>
 
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" name="devoured" value="0" class="colTitle">
-                    <label for="fresh">
-                        <p class="colTitle">Fresh.</p>
+                    <input type="radio" name="devoured" value="1" class="colTitle">
+                    <label for="devoured">
+                        <p class="colTitle">Devoured.</p>
                     </label>
                 </div>
 
